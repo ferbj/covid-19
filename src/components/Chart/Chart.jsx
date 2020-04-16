@@ -17,9 +17,9 @@ const Chart = ({data:{ confirmed, deaths, recovered}, country}) =>{
   const lineChart = (
     dailyData.length !==0 ? (
   <Line data={{
-    labels: dailyData.map(({ date }) =>  date ),
+    labels: dailyData.map(({date}) => date) ,
     datasets: [{
-      data: dailyData.map(({ confirmed }) =>  confirmed ),
+      data: dailyData.map(({confirmed}) =>  confirmed ),
       label : 'Infected',
       borderColor: 'red',
       fill: true
